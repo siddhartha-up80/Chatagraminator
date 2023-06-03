@@ -1,21 +1,22 @@
-# Next.js 13 Full Course 2023 | Build and Deploy a Full Stack App Using the Official React Framework
-![AI Prompt Sharing](https://i.ibb.co/9pQNZZy/Thumbnail-27.png)
+# Chatagram
 
-## Introduction
-Next.js recently became the official React framework as outlined in React docs. In this course, you'll learn the most important Next.js concepts and how they fit into the React ecosystem. Finally, you'll put your skills to the test by building a modern full-stack Next 13 application.
- 
-In this video, you'll learn:
-- Next.js 13 App Folder Structure
-- Next.js 13 Client Components vs Server Components
-- Next.js 13 File-based Routing (including dynamic and nested routes)
-- Next.js 13 page, layout, loading, and error Special Files
-- Next.js 13 Serverless Route Handlers (Next API, Full Stack Apps)
-- Next.js 13 Metadata and Search Engine Optimization (SEO)
-- Three ways to fetch data in Next.js:
-   - Server Side Rendering (SSR),
-   - Static Site Generation (SSG)
-   - Incremental Static Generation (ISR)
+Chatagraminator: Where captivating conversations meet captivating visuals. Connect, chat, and share moments in a vibrant and interactive community blending the best of chat-based communication and Instagram-inspired sharing. Combines the power of ChatGPT with the interactive features of Instagram. 
 
-## Want to land your dream programming job in 3 - 6 months?
-⭐ JSM Masterclass Experience - https://jsmastery.pro/masterclass
-Become a Software Engineer. Guaranteed.
+## Technologies Used
+
+- Next.js: A React framework for server-side rendering and building modern web applications.
+- MongoDB: A NoSQL database for storing user data and chat prompts.
+- NextAuth.js: An authentication library for Next.js applications.
+- JWT (JSON Web Tokens): Used for secure user authentication and authorization.
+- Tailwind CSS: A utility-first CSS framework for building responsive and customizable user interfaces.
+
+## Features
+
+- User registration and authentication using NextAuth.js and JWT.
+- Creating and sharing AI-generated chat prompts.
+- News feed showcasing shared chat prompts from other users.
+- Like, comment, and save functionality for chat prompts.
+- User profiles with information about their shared prompts.
+- Search functionality to discover and connect with other users.
+- Responsive and visually appealing UI built with Tailwind CSS.
+
