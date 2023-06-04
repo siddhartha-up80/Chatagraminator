@@ -4,26 +4,14 @@ import { useSession } from "next-auth/react";
 
 const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {
   const { data: session } = useSession();
-
+// console.log(data);
   return (
     <div className="w-screen">
       <main className="bg-gray-100 bg-opacity-25">
         <div className="lg:w-8/12 lg:mx-auto mb-8">
           <div>
             <header className="flex flex-wrap items-center p-4 md:py-8">
-              <div className="md:w-3/12 md:ml-16">
-                {/* profile image */}
-                <img
-                  className="w-20 h-20 md:w-40 md:h-40 object-cover rounded-full
-               border-2 border-black p-1"
-                  src={
-                    session?.user.image
-                      ? session?.user.image
-                      : "https://source.unsplash.com/random/900×700/?girl=1"
-                  }
-                  alt="profile"
-                />
-              </div>
+              <div className="md:w-3/12 md:ml-16">{/* profile image */}</div>
               {/* profile meta */}
               <div className="w-8/12 md:w-7/12 ml-4">
                 <div className="md:flex md:flex-wrap md:items-center mb-4">
@@ -43,12 +31,6 @@ const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {
                   </span>
                 </div>
 
-                <ul className="hidden md:flex space-x-8 mb-4">
-                  <li>
-                    <span className="font-semibold">{data.length} </span>
-                    posts
-                  </li>
-                </ul>
                 {/* user meta form medium screens */}
                 <div className="hidden md:block">
                   <h1 className="font-semibold">{session?.user.name}</h1>
@@ -84,7 +66,7 @@ const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {
                 <li className="md:border-t md:border-gray-700 md:-mt-px md:text-gray-700">
                   <a className="inline-block p-3" href="#">
                     <i className="fas fa-th-large text-xl md:text-xs" />
-                    <span className="hidden md:inline">post</span>
+                    <span className="hidden md:inline"> {data.length} post</span>
                   </a>
                 </li>
               </ul>
