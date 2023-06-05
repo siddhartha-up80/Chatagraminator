@@ -25,15 +25,15 @@ const Feed = () => {
   const [searchText, setSearchText] = useState("");
   const [searchTimeout, setSearchTimeout] = useState(null);
   const [searchedResults, setSearchedResults] = useState([]);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   const fetchPosts = async () => {
-    setLoading(true);
+    // setLoading(true);
     const response = await fetch("/api/prompt");
     const data = await response.json();
 
     setAllPosts(data);
-    setLoading(false);
+    // setLoading(false);
   };
 
   useEffect(() => {
@@ -80,7 +80,7 @@ const Feed = () => {
 
   return (
     <section className="feedss ">
-      {!loading ? (
+      {/* {!loading ? ( */}
         <div>
           {/* no of post bar */}
           <div className="w-full justify-center flex items-center">
@@ -211,12 +211,12 @@ const Feed = () => {
           </div>
           {/* end of twitter feed */}
         </div>
-      ) : (
+      {/* ) : (
         <div
           className="w-12 h-12 rounded-full animate-spin
                     border-8 border-solid border-purple-500 border-t-transparent"
         ></div>
-      )}
+      )} */}
     </section>
   );
 };
