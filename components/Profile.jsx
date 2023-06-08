@@ -7,7 +7,7 @@ const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {
 // console.log(data);
   return (
     <div className="w-screen">
-      <main className="bg-gray-100 bg-opacity-25">
+      <main className="bg-opacity-25">
         <div className="lg:w-8/12 lg:mx-auto mb-8">
           <div>
             <header className="flex flex-wrap items-center p-4 md:py-8">

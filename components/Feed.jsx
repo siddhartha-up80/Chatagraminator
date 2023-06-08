@@ -192,7 +192,7 @@ const Feed = () => {
               </div>
             </div>
           </div>
-          <div className="mb-3 text-xs">
+          {/* <div className="mb-3 text-xs">
             <span className="mr-2">
               <Link href="/" className="text-grey-darker">
                 © 2023 Chatagraminator
@@ -208,7 +208,7 @@ const Feed = () => {
                 Help Center
               </Link>
             </span>
-          </div>
+          </div> */}
           {/* end of twitter feed */}
         </div>
       {/* ) : (
