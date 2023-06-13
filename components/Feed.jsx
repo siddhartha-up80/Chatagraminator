@@ -81,7 +81,7 @@ const Feed = () => {
   return (
     <section className="feedss ">
       {/* {!loading ? ( */}
-        <div>
+       
           {/* no of post bar */}
           <div className="w-full justify-center flex items-center">
             <ul className="list-reset flex">
@@ -210,7 +210,7 @@ const Feed = () => {
             </span>
           </div> */}
           {/* end of twitter feed */}
-        </div>
+       
       {/* ) : (
         <div
           className="w-12 h-12 rounded-full animate-spin
