@@ -19,7 +19,7 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className="flex-between w-full mb-16 pt-3">
+    <nav className="flex-between w-full mb-16 pt-3 md:hidden z-10">
       <Link href="/" className="flex gap-2 flex-center">
         <p className="logo_text">Chatagram</p>
       </Link>
@@ -69,20 +69,8 @@ const Nav = () => {
       <div className="sm:hidden flex relative">
         {session?.user ? (
           <div className="flex">
-            <Link href="/create-prompt" className="black_btn mr-2">
-              Create Post
-            </Link>
-            <Image
-              src={session?.user.image}
-              width={37}
-              height={37}
-              className="rounded-full "
-              alt="profile"
-              onClick={() => setToggleDropdown(!toggleDropdown)}
-            />
-
             {toggleDropdown && (
-              <div className="dropdown">
+              <div className="dropdown absolute right-10 top-full mt-3 w-full p-5 rounded-lg bg-white min-w-[210px] flex flex-col gap-2 justify-end items-end">
                 <Link
                   href="/profile"
                   className="dropdown_link"
@@ -95,7 +83,7 @@ const Nav = () => {
                   className="dropdown_link"
                   onClick={() => setToggleDropdown(false)}
                 >
-                  Create Prompt
+                  Create Post
                 </Link>
                 <button
                   type="button"
@@ -109,6 +97,18 @@ const Nav = () => {
                 </button>
               </div>
             )}
+
+            <Image
+              src={session?.user.image}
+              width={37}
+              height={37}
+              className="rounded-full mr-2 "
+              alt="profile"
+              onClick={() => setToggleDropdown(!toggleDropdown)}
+            />
+            <Link href="/create-prompt" className="black_btn mr-2">
+              Create Post
+            </Link>
           </div>
         ) : (
           <>

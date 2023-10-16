@@ -5,7 +5,7 @@ import React from "react";
 
 const Help = () => {
   return (
-    <div className="bg-gray-100 min-h-screen py-10 rounded-xl w-[90vw]">
+    <div className="min-h-screen py-10 rounded-xl w-[90vw]">
       <div className="max-w-3xl mx-auto px-4">
         <h1 className="text-3xl font-bold mb-4">Help Page</h1>
         <p className="text-lg mb-6">
@@ -15,7 +15,7 @@ const Help = () => {
           Follow the instructions below to make the most of Chatagraminator:
         </p>
 
-        <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+        <div className="bg-blue-100  rounded-lg shadow-md p-6 mb-6">
           <h2 className="text-xl font-bold mb-2">How to Create a New Post</h2>
           <p className="text-lg">
             To create a new post, click on the "Create Post" button located in
@@ -24,7 +24,7 @@ const Help = () => {
           </p>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+        <div className="bg-blue-100  rounded-lg shadow-md p-6 mb-6">
           <h2 className="text-xl font-bold mb-2">Getting AI Answers</h2>
           <p className="text-lg">
             On the Create Post page, you'll find an "AI Answer" button. Clicking
@@ -33,7 +33,7 @@ const Help = () => {
           </p>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+        <div className="bg-blue-100 border rounded-lg shadow-md p-6 mb-6">
           <h2 className="text-xl font-bold mb-2">Posting to the Feed</h2>
           <p className="text-lg">
             Once you have your question and AI-generated answer ready, click the

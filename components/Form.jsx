@@ -36,7 +36,7 @@ const Form = ({
   };
 
   return (
-    <section className="w-full max-w-full flex-start flex-col">
+    <section className="flex-start flex-col ml-28 mr-5">
       <h1 className="head_text text-left">
         <span className="">{type} Post</span>
       </h1>
@@ -50,7 +50,7 @@ const Form = ({
       >
         <label>
           <span className="font-satoshi font-semibold text-base text-gray-700">
-            Your AI Prompt
+            Your AI Post
           </span>
 
           <textarea

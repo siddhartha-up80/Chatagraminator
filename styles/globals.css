@@ -4,14 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .main {
   width: 100vw;
   min-height: 100vh;
   position: fixed;
   display: flex;
   justify-content: center;
-  padding: 120px 24px 160px 24px;
+  /* padding:; */
   pointer-events: none;
 }
 
@@ -38,7 +37,6 @@
 }
  */
 
-
 @media screen and (max-width: 640px) {
   .main {
     padding: 0;
@@ -48,7 +46,10 @@
 /* Tailwind Styles */
 
 .app {
-  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+  @apply relative flex 
+  justify-center items-center flex-col 
+ /* max-w-7xl */
+  ;
 }
 
 .black_btn {
@@ -111,12 +112,12 @@
 
 /* Nav Component */
 .logo_text {
-  @apply  font-satoshi font-semibold text-lg text-black tracking-wide;
+  @apply font-satoshi font-semibold text-lg text-black tracking-wide;
 }
 
-.dropdown {
-  @apply absolute right-0 top-full mt-3 w-full p-5 rounded-lg bg-white min-w-[210px] flex flex-col gap-2 justify-end items-end;
-}
+/* .dropdown {
+  @apply absolute left-10 top-full mt-3 w-full p-5 rounded-lg bg-white min-w-[210px] flex flex-col gap-2 justify-end items-end;
+} */
 
 .dropdown_link {
   @apply text-sm font-inter text-gray-700 hover:text-gray-500 font-medium;

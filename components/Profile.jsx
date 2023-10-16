@@ -6,7 +6,7 @@ const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {
   const { data: session } = useSession();
 // console.log(data);
   return (
-    <div className="w-screen">
+    <div className="w-screen ml-20 md:ml-0">
       <main className="bg-opacity-25">
         <div className="lg:w-8/12 lg:mx-auto mb-8">
           <div>
@@ -66,7 +66,10 @@ const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {
                 <li className="md:border-t md:border-gray-700 md:-mt-px md:text-gray-700">
                   <a className="inline-block p-3" href="#">
                     <i className="fas fa-th-large text-xl md:text-xs" />
-                    <span className="hidden md:inline"> {data.length} post</span>
+                    <span className="hidden md:inline">
+                      {" "}
+                      {data.length} post
+                    </span>
                   </a>
                 </li>
               </ul>

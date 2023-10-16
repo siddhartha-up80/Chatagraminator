@@ -4,12 +4,13 @@ import { useState } from "react";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
 import { usePathname, useRouter } from "next/navigation";
-import {
-  WhatsappShareButton,
-  WhatsappIcon,
-  LinkedinShareButton,
-  LinkedinIcon
-} from "react-share";
+
+// import {
+//   WhatsappShareButton,
+//   WhatsappIcon,
+//   LinkedinShareButton,
+//   LinkedinIcon
+// } from "react-share";
 
 const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
   const { data: session } = useSession();
@@ -34,70 +35,6 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
 
   return (
     <>
-      {/* <div className="prompt_card">
-        <div className="flex justify-between items-start gap-5">
-          <div
-            className="flex-1 flex justify-start items-center gap-3 cursor-pointer"
-            onClick={handleProfileClick}
-          >
-            <Image
-              src={post.creator.image}
-              alt="user_image"
-              width={40}
-              height={40}
-              className="rounded-full object-contain"
-            />
-
-            <div className="flex flex-col">
-              <h3 className="font-satoshi font-semibold text-gray-900">
-                {post.creator.username}
-              </h3>
-              <p className="font-inter text-sm text-gray-500">
-                {post.creator.email}
-              </p>
-            </div>
-          </div>
-
-          <div className="copy_btn" onClick={handleCopy}>
-            <Image
-              src={
-                copied === post.prompt
-                  ? "/assets/icons/tick.svg"
-                  : "/assets/icons/copy.svg"
-              }
-              alt={copied === post.prompt ? "tick_icon" : "copy_icon"}
-              width={12}
-              height={12}
-            />
-          </div>
-        </div>
-
-        <p className="my-4 font-satoshi text-sm text-gray-700">{post.prompt}</p>
-        <p
-          className="font-inter text-sm blue_gradient cursor-pointer"
-          onClick={() => handleTagClick && handleTagClick(post.tag)}
-        >
-          #{post.tag}
-        </p>
-
-        {session?.user.id === post.creator._id && pathName === "/profile" && (
-          <div className="mt-5 flex-center gap-4 border-t border-gray-100 pt-3">
-            <p
-              className="font-inter text-sm green_gradient cursor-pointer"
-              onClick={handleEdit}
-            >
-              Edit
-            </p>
-            <p
-              className="font-inter text-sm orange_gradient cursor-pointer"
-              onClick={handleDelete}
-            >
-              Delete
-            </p>
-          </div>
-        )}
-      </div> */}
-
       {/* Feed card */}
       <div className="flex border-b border-solid border-grey-light">
         <div className="w-1/8 text-right pl-3 pt-3">
@@ -136,23 +73,23 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
               <div className="mb-6 flex justify-end">
                 {/* <span>🎉 Tailwind CSS v0.4.0 is out!</span> */}
                 <span className="flex justify-end items-center gap-2">
-                  <span>
+                  {/* <span>
                     <WhatsappShareButton url={post.prompt}>
                       <WhatsappIcon
                         size={27}
                         style={{ borderRadius: "100px", marginTop: "3px" }}
                       />
                     </WhatsappShareButton>
-                  </span>
+                  </span> */}
 
-                  <span>
+                  {/* <span>
                     <LinkedinShareButton url={post.prompt}>
                       <LinkedinIcon
                         size={27}
                         style={{ borderRadius: "100px", marginTop: "3px" }}
                       />
                     </LinkedinShareButton>
-                  </span>
+                  </span> */}
 
                   <span
                     className="copy_btn flex justify-center items-center"
