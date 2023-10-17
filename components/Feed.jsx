@@ -45,7 +45,7 @@ const Feed = () => {
     const regex = new RegExp(searchtext, "i"); // 'i' flag for case-insensitive search
     return allPosts.filter(
       (item) =>
-        regex.test(item.creator.username) ||
+        regex.test(item.creator?.username) ||
         regex.test(item.tag) ||
         regex.test(item.prompt)
     );
@@ -76,7 +76,7 @@ const Feed = () => {
   const numPrompts = allPosts.length;
   const uniqueTags = [...new Set(allPosts.map((post) => post.tag))];
   const numTags = uniqueTags.length;
-  const uniqueCreators = [...new Set(allPosts.map((post) => post.creator._id))];
+  const uniqueCreators = [...new Set(allPosts.map((post) => post.creator?._id))];
   const numCreators = uniqueCreators.length;
 
   return (
@@ -103,10 +103,10 @@ const Feed = () => {
           </form>
         </div>
         <div className="p-3">
-          <div className="mb-3 pb-4 border-b-2 border-solid  hover:border-teal mt-2">
+          <div className="mb-3 pb-4 border-b-2 border-solid hover:border-teal mt-2">
             <span className="text-lg font-bold">Topics</span>
           </div>
-          <div className="flex flex-wrap flex-col">
+          <div className="flex flex-wrap flex-col max-h-[60vh]">
             {allPosts.map((post) => (
               <div>
                 <div className="mb-3 leading-tight">
