@@ -64,7 +64,7 @@ const Form = ({
                 prompt: e.target.value,
               })
             }
-            placeholder="Write your post here"
+            placeholder="Write your question here and then click the AI answer button to generate ai response"
             required
             disabled={answer}
             className="form_textarea"
@@ -96,14 +96,14 @@ const Form = ({
             id="gpt"
             disabled={submitting}
             onClick={gpt}
-            className="px-5 py-1.5 text-sm mb-5 bg-black rounded-full text-white mt-5 cursor-pointer"
+            className="px-5 py-1.5 text-sm mb-5 bg-black rounded-md text-white mt-5 cursor-pointer"
           >
             {aiAnswerLoading ? "Loading..." : "AI Answer"}
           </div>
           <button
             type="submit"
             disabled={submitting}
-            className="px-5 py-1.5 text-sm bg-primary-orange rounded-full text-white"
+            className="px-5 py-1.5 text-sm bg-primary-orange rounded-md text-white"
           >
             {submitting ? `${type}ing...` : "Share"}
           </button>
