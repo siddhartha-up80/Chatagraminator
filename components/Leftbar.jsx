@@ -21,7 +21,7 @@ const Leftbar = () => {
   return (
     <div className="">
       <div className="w-68 xs:w-88 xl:w-275">
-        <div className="flex flex-col justify-between h-screen overflow-hidden xl:pr-3 fixed left-0 md:pl-5 overflow-y-auto w-68 xs:w-88 xl:w-275 bg-white">
+        <div className="flex flex-col justify-between h-screen overflow-hidden xl:pr-3 fixed left-0 md:pl-5 overflow-y-auto w-68 xs:w-88 xl:w-275 bg-white ">
           {/* navbar previous  */}
 
           {/* navbar previous  */}
@@ -137,7 +137,7 @@ const Leftbar = () => {
               </span>
             </Link>
             <Link
-              href="/"
+              href="/feed"
               className="flex items-center justify-center xl:justify-start text-gray-800 darkk:text-white hover:text-blue-400 darkk:hover:text-blue-400 mb-8 transition duration-350 ease-in-out"
             >
               <svg fill="currentColor" viewBox="0 0 24 24" className="h-6 w-6">
@@ -188,8 +188,8 @@ const Leftbar = () => {
                 More
               </span>
             </div> */}
-            <div className="mx-auto w-11 h-11 xl:w-auto flex items-center justify-center md:bg-blue-400 md:hover:bg-blue-500 py-3 rounded-full text-white font-bold font-sm transition duration-350 ease-in-out mb-10">
-              {session?.user ? (
+            <div className="mx-auto w-11 h-11 xl:w-auto flex items-center justify-center py-3 rounded-full text-white font-bold font-sm transition duration-350 ease-in-out mb-10">
+              {/* {session?.user ? (
                 <Link
                   href="/create-prompt"
                   className="black_btn1 mr-2 py-3 px-3 rounded-full bg-blue-400 hover:bg-blue-500"
@@ -197,17 +197,20 @@ const Leftbar = () => {
                   <svg
                     fill="currentColor"
                     viewBox="0 0 24 24"
-                    className="block xl:hidden h-6 w-6"
+                    className="block sm:hidden h-6 w-6"
                   >
                     <path d="M8.8 7.2H5.6V3.9c0-.4-.3-.8-.8-.8s-.7.4-.7.8v3.3H.8c-.4 0-.8.3-.8.8s.3.8.8.8h3.3v3.3c0 .4.3.8.8.8s.8-.3.8-.8V8.7H9c.4 0 .8-.3.8-.8s-.5-.7-1-.7zm15-4.9v-.1h-.1c-.1 0-9.2 1.2-14.4 11.7-3.8 7.6-3.6 9.9-3.3 9.9.3.1 3.4-6.5 6.7-9.2 5.2-1.1 6.6-3.6 6.6-3.6s-1.5.2-2.1.2c-.8 0-1.4-.2-1.7-.3 1.3-1.2 2.4-1.5 3.5-1.7.9-.2 1.8-.4 3-1.2 2.2-1.6 1.9-5.5 1.8-5.7z" />
                   </svg>
                 </Link>
-              ) : null}
+              ) : null} */}
 
               <div className="sm:flex hidden">
                 {session?.user ? (
                   <div className="flex gap-3 md:gap-5">
-                    <Link href="/create-prompt" className="black_btn1">
+                    <Link
+                      href="/create-prompt"
+                      className="black_btn1 md:bg-blue-400 md:hover:bg-blue-500 px-6 py-2 rounded-md"
+                    >
                       Create Post
                     </Link>
                   </div>
@@ -215,16 +218,24 @@ const Leftbar = () => {
                   <>
                     {providers &&
                       Object.values(providers).map((provider) => (
-                        <button
-                          type="button"
-                          key={provider.name}
-                          onClick={() => {
-                            signIn(provider.id);
-                          }}
-                          className="black_btn1"
-                        >
-                          Sign in
-                        </button>
+                        <div className="flex flex-col gap-4 mt-10">
+                          <button
+                            type="button"
+                            key={provider.name}
+                            onClick={() => {
+                              signIn(provider.id);
+                            }}
+                            className="black_btn1 md:bg-blue-400 md:hover:bg-blue-500 px-6 py-2 rounded-md"
+                          >
+                            Sign in
+                          </button>
+                          <Link
+                            href="/create-prompt"
+                            className="black_btn1 md:bg-blue-400 md:hover:bg-blue-500  px-6 py-2 rounded-md"
+                          >
+                            Create Post
+                          </Link>
+                        </div>
                       ))}
                   </>
                 )}
@@ -277,16 +288,25 @@ const Leftbar = () => {
               <>
                 {providers &&
                   Object.values(providers).map((provider) => (
-                    <button
-                      type="button"
-                      key={provider.name}
-                      onClick={() => {
-                        signIn(provider.id);
-                      }}
-                      className="black_btn"
-                    >
-                      Sign in
-                    </button>
+                    <div className="gap-2 flex flex-col">
+                      <button
+                        type="button"
+                        key={provider.name}
+                        onClick={() => {
+                          signIn(provider.id);
+                        }}
+                        className="black_btn"
+                      >
+                        Sign in
+                      </button>
+
+                      <Link
+                        href="/create-prompt"
+                        className="black_btn !px-1"
+                      >
+                        Create Post
+                      </Link>
+                    </div>
                   ))}
               </>
             )}

@@ -43,7 +43,7 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
           </div>
         </div>
         <div className="w-7/8 p-3 pl-0">
-          <div className="flex justify-between">
+          {post.creator ? <div className="flex justify-between">
             <div onClick={handleProfileClick}>
               <div className="flex">
                 <Image
@@ -67,7 +67,11 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
             <div>
               
             </div>
-          </div>
+          </div> : <div className="justify-between flex font-bold">
+            Unknown User
+          </div>}
+
+          
           <div>
             <div className="mb-4">
               <div className="mb-6 flex justify-end">
@@ -117,7 +121,9 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
               </p> */}
               <p>
                 <div className="w-full h-72 bg-center">
-                  <img
+                  <Image
+                    width={300}
+                    height={300}
                     src={`https://source.unsplash.com/random/900×700/?${post.tag}`}
                     alt="tweet image"
                     className="object-cover w-full h-full border border-solid border-grey-light rounded-sm"

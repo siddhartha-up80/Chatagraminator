@@ -19,7 +19,7 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className="flex-between w-full mb-16 pt-3 md:hidden z-10">
+    <nav className="flex-between w-full mb-16 pt-3 md:hidden z-10 shadow-md pb-2">
       <Link href="/" className="flex gap-2 flex-center">
         <p className="logo_text">Chatagram</p>
       </Link>
@@ -114,16 +114,21 @@ const Nav = () => {
           <>
             {providers &&
               Object.values(providers).map((provider) => (
-                <button
-                  type="button"
-                  key={provider.name}
-                  onClick={() => {
-                    signIn(provider.id);
-                  }}
-                  className="black_btn"
-                >
-                  Sign in
-                </button>
+                <>
+                  <button
+                    type="button"
+                    key={provider.name}
+                    onClick={() => {
+                      signIn(provider.id);
+                    }}
+                    className="black_btn"
+                  >
+                    Sign in
+                  </button>
+                  <Link href="/create-prompt" className="black_btn mx-2">
+                    Create Post
+                  </Link>
+                </>
               ))}
           </>
         )}

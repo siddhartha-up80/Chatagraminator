@@ -36,21 +36,21 @@ const Form = ({
   };
 
   return (
-    <section className="flex-start flex-col ml-28 mr-5">
-      <h1 className="head_text text-left">
+    <section className="flex-start flex-col ml-36 mr-5">
+      <h1 className="text-5xl text-left">
         <span className="">{type} Post</span>
       </h1>
       <p className="desc text-left max-w-md">
-        {type} AI Answer with your query text and share with community
+        Write your question in the textarea and click AI answer to generate response with AI and then share with community
       </p>
 
       <form
         onSubmit={handleSubmit}
-        className="mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism"
+        className="mt-10 md:w-full max-w-2xl flex flex-col flex-wrap gap-7 bg-blue-50 px-10 py-5 rounded-md"
       >
         <label>
           <span className="font-satoshi font-semibold text-base text-gray-700">
-            Your AI Post
+            Your AI Q/A Post
           </span>
 
           <textarea
@@ -66,22 +66,23 @@ const Form = ({
             }
             placeholder="Write your post here"
             required
+            disabled={answer}
             className="form_textarea"
           />
         </label>
 
         <label>
           <span className="font-satoshi font-semibold text-base text-gray-700">
-            Type{" "}
+            Write your topic name{" "}
             <span className="font-normal">
-              (#product, #webdevelopment, #idea, etc.)
+              (product, webdevelopment, idea, etc.)
             </span>
           </span>
           <input
             value={post.tag}
             onChange={(e) => setPost({ ...post, tag: e.target.value })}
             type="text"
-            placeholder="#Tag"
+            placeholder="Your Topic"
             required
             className="form_input"
           />
@@ -104,7 +105,7 @@ const Form = ({
             disabled={submitting}
             className="px-5 py-1.5 text-sm bg-primary-orange rounded-full text-white"
           >
-            {submitting ? `${type}ing...` : type}
+            {submitting ? `${type}ing...` : "Share"}
           </button>
         </div>
       </form>

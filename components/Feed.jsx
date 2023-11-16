@@ -80,7 +80,7 @@ const Feed = () => {
   const numCreators = uniqueCreators.length;
 
   return (
-    <section className="feeds1 bg-white dark:bg-dim-900 ml-20">
+    <div className="feeds1 bg-white dark:bg-dim-900 ml-20">
 
       {/* {!loading ? ( */}
 
@@ -287,7 +287,7 @@ const Feed = () => {
         ></div>
       )} */}
       </div>
-    </section>
+    </div>
   );
 };
 
