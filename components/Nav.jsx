@@ -19,9 +19,9 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className="flex-between w-full mb-16 pt-3 md:hidden z-10 shadow-md pb-2">
+    <nav className="flex-between w-full mb-16 pt-3 md:hidden z-10 shadow-md pb-2 fixed top-0 bg-white">
       <Link href="/" className="flex gap-2 flex-center">
-        <p className="logo_text">Chatagram</p>
+        <p className="logo_text ml-2">Chatagram</p>
       </Link>
 
       {/* Desktop Navigation */}

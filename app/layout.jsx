@@ -21,8 +21,8 @@ const RootLayout = ({ children }) => (
         <main className="app">
           <Leftbar />
           <Nav />
-          {children}
-          <Footer/>
+          <div className="mt-10">{children}</div>
+          <Footer />
         </main>
       </Provider>
     </body>

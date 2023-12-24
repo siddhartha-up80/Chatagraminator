@@ -80,7 +80,7 @@ const Feed = () => {
   const numCreators = uniqueCreators.length;
 
   return (
-    <div className="feeds1 bg-white dark:bg-dim-900 ml-20">
+    <div className="feeds1 bg-white dark:bg-dim-900 md:ml-20">
 
       {/* {!loading ? ( */}
 
@@ -145,7 +145,7 @@ const Feed = () => {
 
       {/* topics */}
 
-      <div className="md:mr-[25vw] md:ml-[8vw] md:max-w-[55vw]">
+      <div className="md:mr-[25vw] md:ml-[8vw] md:max-w-[50vw]">
         {/* no of post bar */}
         <div className="w-full justify-center flex items-center">
           <ul className="list-reset flex">

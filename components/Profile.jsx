@@ -6,7 +6,7 @@ const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {
   const { data: session } = useSession();
 // console.log(data);
   return (
-    <div className="w-screen ml-20 md:ml-0">
+    <div className="w-screen md:ml-20 md:ml-0">
       <main className="bg-opacity-25">
         <div className="lg:w-8/12 lg:mx-auto mb-8">
           <div>

@@ -19,7 +19,7 @@ const Leftbar = () => {
   }, []);
 
   return (
-    <div className="">
+    <div className="hidden md:block">
       <div className="w-68 xs:w-88 xl:w-275">
         <div className="flex flex-col justify-between h-screen overflow-hidden xl:pr-3 fixed left-0 md:pl-5 overflow-y-auto w-68 xs:w-88 xl:w-275 bg-white ">
           {/* navbar previous  */}

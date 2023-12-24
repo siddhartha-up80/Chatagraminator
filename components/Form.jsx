@@ -36,7 +36,7 @@ const Form = ({
   };
 
   return (
-    <section className="flex-start flex-col ml-36 mr-5">
+    <section className="flex-start flex-col md:ml-36 mr-5 mt-10 m-2">
       <h1 className="text-5xl text-left">
         <span className="">{type} Post</span>
       </h1>

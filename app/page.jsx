@@ -5,7 +5,7 @@ import Feed from "@components/Feed";
 const Home = () => (
   <>
     <div className="">
-      <div className="min-h-[90vh] bg-gradient-to-r flex items-center justify-center md:max-w-[75vw] ml-20">
+      <div className="min-h-[90vh] bg-gradient-to-r flex items-center justify-center md:max-w-[65vw] md:ml-20">
         <div className="w-full max-w-4xl p-8 rounded-lg text-center">
           <h1 className="text-4xl font-semibold mb-6">
             Welcome to Chatagram - Where AI Answers Connect!
